@@ -13,5 +13,6 @@ routes.post('/cliente',clientController.create)
 
 routes.get('/livro',livroController.get)
 routes.post('/livro',livroController.create)
+routes.post('/livro/:id',livroController.putIsAlterado)
 
 module.exports = {routes}
