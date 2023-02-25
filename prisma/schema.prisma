@@ -27,9 +27,9 @@ model Livro {
 
 model Aluguel {
   id              Int      @id @default(autoincrement())
-  data            DateTime
-  dataDevolucao   DateTime
-  valorArrecadado Decimal
+  data            DateTime @default(now())
+  dataDevolucao   DateTime?
+  valorArrecadado Decimal?
 
   Cliente Cliente @relation(fields: [clienteId], references: [id])
   clienteId Int
